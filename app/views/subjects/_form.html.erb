@@ -1,0 +1,13 @@
+<%= form_for(@subject) do |f| %>
+<div class="row">
+<div class="subject-top col l12">
+  <div class="input-field col l11">
+    <%= f.text_field :name, class:"name-field", placeholder:"Enter subject name" %>
+  </div>
+
+  <div class="submit-btn col l1">
+    <%= f.submit '+', class:"btn-floating btn-large waves-effect waves-light light-blue darken-1" %>
+  </div>
+  </div>
+</div>
+<% end %>

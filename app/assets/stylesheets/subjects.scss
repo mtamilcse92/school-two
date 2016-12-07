@@ -1,0 +1,72 @@
+// Place all the styles related to the subjects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.col-2 {
+	margin-top: 1.5%;
+    border-bottom: 2px solid gray;
+    padding: 1em;
+}
+
+.submit-btn {
+	.waves-input-wrapper {
+    border-radius: 3.2em;
+    vertical-align: bottom;
+}
+}
+
+.subject-display {
+	display: none;
+}
+.nav-wrapper {
+    ul {
+        li {
+            a {
+                color: gray;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.subject-text {
+	border: 2px solid gray;
+}
+
+.subject-top {
+	margin-top: 1%;
+	.name-field {
+	   margin-bottom: 0px;
+	   font-size: 3rem;
+	   border-bottom: 0;
+	}
+
+	.name-field:focus {
+		border-bottom: 1px solid white !important;
+		box-shadow:  0 1px 0 0 white !important;
+	}
+}
+
+.collapsible-header {
+	.name-field {
+	   margin-bottom: 0px;
+	   font-size: 3rem;
+	   border-bottom: 0;
+	   padding: 0.5em;
+	}
+
+	.name-field:focus {
+		border-bottom: 1px solid white !important;
+		box-shadow:  0 1px 0 0 white !important;
+	}
+}
+
+.collapsible{
+.material-icons {
+	font-size: 3rem;
+	margin-top: 11%;
+}
+}
+
+.delete {
+    margin-left: 50%;
+}

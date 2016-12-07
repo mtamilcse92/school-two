@@ -1,0 +1,38 @@
+<div class="row">
+<div class="col-2 col l10 offset-l1">
+	<h4 class="col l2">SUBJECTS</h4>
+	<h4 class="col l2 offset-l7">New Subject</h4>
+	<a class="add-subject btn-floating btn-large waves-effect waves-light light-blue darken-1"><i class="material-icons">add</i></a>
+</div>
+</div>
+<div id="subject-display" class="row subject-display">
+<div class="subject-text col l10 offset-l1">
+<%= render "subjects/form" %>
+</div>
+</div>
+
+<% @subjects.each do |subject| %>
+<div class="row">
+ <ul class="collapsible col l10 offset-l1" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+      <%= form_for @subject, method: :put do |f| %>
+      <div class="row">
+      <div class="col l10">
+      	 <%= f.text_field :name, :value =>subject.name, class:"name-field", readonly: true %>
+      </div>
+      <div class="col l2">
+      <%= link_to 'mode_edit', subject_path(subject),  class:"edit-subject material-icons" %>
+      	<%= link_to 'delete', subject, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
+      </div>
+      </div>
+      </div>
+      <% end %>
+      <div class="collapsible-body">
+	  <div class="add-header"><a class="add-button left btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></div>
+      <p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+</div>
+  <% end %>
+<%= render "topics/new" %>
