@@ -11,7 +11,7 @@ $('.edit-subject').click(function() {
 });
 
 $('.add-topics-button').click(function() {
-	console.log($(this).children().children().children().find('#add-topic'));
-   $(this).children().find('#add-topic').removeClass("add-topic");
+	console.log($(this).parent().parent().next());
+   $(this).parent().parent().next().removeClass("add-topic");
 });
 });

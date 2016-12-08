@@ -17,14 +17,18 @@
  <ul class="collapsible col l10 offset-l1" data-collapsible="accordion">
     <li>
       <div class="collapsible-header">
-      <%= form_for @subject do |f| %>
+       <%= form_for @subject, :url => {:action => "update", :id => subject, :controller => "subjects"}, method: :put do |f| %>
+      <%#= form_for @subject, url: '/subjects/4', method: :put do |f| %>
+      <%#= form_for @subject, url: subject_update_path(@subject) do |f| %>
       <div class="row">
       <div class="col l10">
-      	 <%= f.text_field :name, :value =>subject.name, class:"name-field" %>
+      	 <%= f.text_field :name, :value =>subject.name, class:"name-field", readonly:true %>
       	 <%= hidden_field_tag :subject_id, subject.id %>
       </div>
-      <div class="col l2">
-      <%= link_to 'mode_edit',subject_path(subject,name: :name, :id => subject.id), method: :put, remote: true, class:"edit-subject material-icons" %>
+      <div class="col l2 edit-bar">
+      <%#= f.submit %>
+      <a class="edit-subject"><i class="material-icons">mode_edit</i></a>
+      <%#= link_to 'mode_edit',subject_path(subject,name: :name, :id => subject.id), method: :put, remote: true, class:"edit-subject material-icons" %>
       	<%= link_to 'delete', subject, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
       </div>
       </div>
@@ -47,16 +51,17 @@
       </div>
       </div>
       <% subject.topics.each do |topics| %>
-		
-		<div class="row">
+		  <%= form_for @topics, :url => {:action => "update", :id => topics, :controller => "topics"}, method: :put do |f| %>
+		 <div class="row">
       <div class="col l10">
-      	 <%= topics.name %>
+      <%= f.text_field :name, :value =>topics.name, class:"name-field" %>
       </div>
       <div class="col l2">
       <%= link_to 'mode_edit', topics, method: :put, class:"edit-subject material-icons" %>
-      	<%= link_to 'delete', topics, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
+      <%= link_to 'delete', topics, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
       </div>
       </div>
+      <% end %>
       <% end %>
       </div>
       </div>
@@ -64,4 +69,3 @@
   </ul>
 </div>
   <% end %>
-<%#= render "topics/new" %>

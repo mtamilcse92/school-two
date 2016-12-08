@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :subjects
   resources :topics
-  put '/subjects' => "subjects#update", as: 'subject_update'
+  # put '/subjects/:id' => "subjects#update", as: 'subject_update'
 
   # resources :subjects do
   #   resources :topics, except: [:index], controller: 'subjects/topics'

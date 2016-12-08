@@ -1,0 +1,11 @@
+<%= form_for @topics do |f| %>
+      <div class="row">
+      <div class="col l11">
+      <%= f.text_field :name, class:"name-field" %>
+       <%= f.hidden_field :subject_id, :value => subject.id %>
+       </div>
+       <div class="col l1">
+       <%= f.submit '+', class:"btn-floating btn-large waves-effect waves-light light-blue darken-1" %>
+       </div>
+      <% end %>
+      </div>

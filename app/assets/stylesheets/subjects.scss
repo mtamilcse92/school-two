@@ -74,3 +74,12 @@
 .add-topic {
 	display: none;
 }
+
+.edit-bar {
+	display: none;
+}
+.collapsible-header:hover {
+	.edit-bar {
+	display: block;
+ }
+}
