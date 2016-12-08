@@ -3,12 +3,15 @@ class SubjectsController < ApplicationController
   def index
     @subjects = Subject.all
     @subject = Subject.new
+    @topics = Topic.new
   end
 
   def show
   end
 
   def new
+    @subject = Subject.new
+    @subject.topics.build
   end
 
   def create
@@ -21,6 +24,7 @@ class SubjectsController < ApplicationController
   end
 
   def edit
+    @subject.topics.build
   end
 
   def update
@@ -44,6 +48,7 @@ class SubjectsController < ApplicationController
   end
 
   def subject_params
-     params.require(:subject).permit(:name)
+    byebug
+     params.require(:subject).permit(:name, topic_attributes: [:name,:id])
   end
 end
