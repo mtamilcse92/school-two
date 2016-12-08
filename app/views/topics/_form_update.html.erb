@@ -1,0 +1,11 @@
+<%= form_for @topics, :url => {:action => "update", :id => topics, :controller => "topics"}, method: :put do |f| %>
+      <div class="row">
+            <div class="col l10">
+                <%= f.text_field :name, :value =>topics.name, class:"name-field" %>
+            </div>
+        <div class="col l2">
+            <%= link_to 'mode_edit', topics, method: :put, class:"edit-subject material-icons" %>
+            <%= link_to 'delete', topics, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
+       </div>
+     </div>
+      <% end %>
