@@ -1,0 +1,11 @@
+@import 'lib/variables';
+.container {
+	width: 100 - 2 * $site_left_pad;
+}
+
+.collapsible-without-border {
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	box-shadow: none;
+}

@@ -4,6 +4,7 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
     @subject = Subject.new
     @topics = Topic.new
+    render :index_sample
   end
 
   def show

@@ -1,0 +1,59 @@
+@import 'lib/variables';
+nav {
+    height: $navbar_height;
+    line-height: $navbar_height;
+    text-transform: uppercase;
+    font-family: Futura;
+    
+	
+	font-size: 10px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	text-align: left;
+	color: #1976d2;
+
+    .brand-logo{
+    	color: $header_font_color;
+    	font-size: $header_font_size;
+    	margin-left: $site_left_pad;
+    	img {
+		    height: 3rem;
+		    margin: auto 0px;
+		    top: 50%;
+		    position: absolute;
+		    margin-top: -1.5rem;
+    	}
+    }
+
+    a.button-collapse i {
+	    height: $navbar_height;
+	    line-height: $navbar_height;
+	    color: $header_font_color;
+	    font-size: $header_font_size;
+    }
+	.nav-wrapper{
+		 ul {
+			li {
+			    &.active a, a:hover { 
+			    	background: none;
+			    	color: $secondary_color;
+			    }
+			    &.active {
+			    	background-color: transparent;
+			    }
+				a {
+					color: $header_font_color;
+					font-size: $header_font_size;
+					padding: 0 3.3rem;
+					.material-icons{
+					    height: $navbar_height;
+					    line-height: $navbar_height;
+					}
+				}
+
+			}
+		}
+	}
+}
+        
