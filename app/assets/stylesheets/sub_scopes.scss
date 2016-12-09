@@ -1,0 +1,33 @@
+.breadcrumb {
+    color: gray !important;
+    &:before {
+        color: gray !important;
+    }
+}
+
+.nav-breadcrumb {
+	box-shadow: none !important;
+	background-color: #fff !important;
+	h4 {
+		color: gray !important;
+	}
+}
+
+.new-sub-sope {
+	padding: 1.5em !important;
+	border-top: 2px solid #039be5;
+	border-bottom: 2px solid #039be5;
+	display: inline-block !important;
+	float: left !important;
+}
+
+.sub-name-field {
+	font-size: 3rem !important;
+}
+
+.sub-scope-form {
+	display: none;
+}
+.show-temp {
+	margin-top: 2%;
+}

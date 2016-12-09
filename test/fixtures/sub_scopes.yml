@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  key_question: MyString
+  core_idea: MyString
+  recommended_grade: MyString
+  topic: one
+
+two:
+  name: MyString
+  key_question: MyString
+  core_idea: MyString
+  recommended_grade: MyString
+  topic: two

@@ -1,10 +1,11 @@
 <%= form_for @topics, :url => {:action => "update", :id => topics, :controller => "topics"}, method: :put do |f| %>
       <div class="row">
-            <div class="col l10">
-                <%= f.text_field :name, :value =>topics.name, class:"name-field" %>
+            <div class="col l8 offset-l1">
+                <%= f.text_field :name, :value =>topics.name, class:"name-field", readonly:true %>
             </div>
-        <div class="col l2">
-            <%= link_to 'mode_edit', topics, method: :put, class:"edit-subject material-icons" %>
+        <div class="col l3">
+            <%= link_to 'trending_flat', sub_scopes_path(:topic => topics.id), class:"edit-subject material-icons" %>
+            <a class="edit-subject"><i class="material-icons">mode_edit</i></a>
             <%= link_to 'delete', topics, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
        </div>
      </div>

@@ -1,0 +1,26 @@
+
+ <%= form_for (@sub_scope), :url => {:action => "update", :id => sub_scope, :controller => "sub_scopes"}, method: :put do |f| %>
+    <div class="new-sub-sope col l4 offset-l1">
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">undo</i></a>
+        <div class="input-field col l4 right">
+        <%= f.select :recommended_grade, options_for_select([["Select One", ""], "Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6"], :selected => sub_scope.recommended_grade) %>
+            <label class="col l11 offset-l1">Recommended Grade</label>
+        </div>
+        <div class="input-field col s11 offset-l1">
+        <%= f.text_field :name, class:"sub-name-field", placeholder:"Enter Sub Scope here", :value =>sub_scope.name %>
+        </div><br>
+        <div class="input-field col s7 offset-l1">
+        <%= f.text_field :key_question, id:"key_questions", :value =>sub_scope.key_question %>
+          <label for="key_questions" class="active">Key Questions</label>
+        </div>
+        <div class="input-field col s7 offset-l1">
+          <%= f.text_field :core_idea, id:"core_idea", :value =>sub_scope.core_idea %>
+          <label for="core_idea" class="active">Core Idea</label>
+        </div>
+        <%= f.hidden_field :topic_id, :value => @topic %>
+        <div class="col s11 offset-l1">
+           <!-- <a class="add-subject right btn-floating btn-large waves-effect waves-light light-blue darken-1"><i class="material-icons">done</i></a> -->
+           <%= f.submit '+', class:"submit-topic right btn-floating btn-large waves-effect waves-light light-blue darken-1" %>
+        </div>
+    </div>
+<% end %>

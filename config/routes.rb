@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
   resources :subjects
   resources :topics
+  resources :sub_scopes
   # put '/subjects/:id' => "subjects#update", as: 'subject_update'
 
   # resources :subjects do

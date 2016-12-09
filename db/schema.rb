@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206044130) do
+ActiveRecord::Schema.define(version: 20161208114834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sub_scopes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "key_question"
+    t.string   "core_idea"
+    t.string   "recommended_grade"
+    t.integer  "topic_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["topic_id"], name: "index_sub_scopes_on_topic_id", using: :btree
+  end
 
   create_table "subjects", force: :cascade do |t|
     t.string   "name"
@@ -29,5 +40,6 @@ ActiveRecord::Schema.define(version: 20161206044130) do
     t.index ["subject_id"], name: "index_topics_on_subject_id", using: :btree
   end
 
+  add_foreign_key "sub_scopes", "topics"
   add_foreign_key "topics", "subjects"
 end

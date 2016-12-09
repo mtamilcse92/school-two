@@ -1,0 +1,22 @@
+ <nav class="nav-breadcrumb">
+    <div class="white">
+    <div class="row">
+      <div class="col l6">
+        <%= link_to 'English', subjects_path, class:"breadcrumb" %>
+        <%= link_to 'Litrature', subjects_path, class:"breadcrumb" %>
+      </div>
+     <div class="col l6"> 
+	   <h4 class="col l4 offset-l5" >New Sub Scope</h4>
+	   <a class="add-sub-scope add-subject btn-floating btn-large waves-effect waves-light light-blue darken-1"><i class="material-icons">add</i></a>
+     </div>
+     </div>
+    </div>
+  </nav>
+<div class="sub-scope-form">
+<%= render "form" %>
+</div>
+<div class="row show-temp">
+<% @sub_scopes.each do |sub_scope| %>
+<%= render partial: "form_update", :locals => { :sub_scope => sub_scope } %>
+<% end %>
+</div>

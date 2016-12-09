@@ -1,11 +1,11 @@
 
  <%= form_for @subject, :url => {:action => "update", :id => subject, :controller => "subjects"}, method: :put do |f| %>
             <div class="row">
-                <div class="col l10">
+                <div class="col l9">
                    <%= f.text_field :name, :value =>subject.name, class:"name-field", readonly:true %>
                    <%= hidden_field_tag :subject_id, subject.id %>
                 </div>
-                <div class="col l2 edit-bar">
+                <div class="col l2 offset-l1 edit-bar">
                     <a class="edit-subject"><i class="material-icons">mode_edit</i></a>
                     <%= link_to 'delete', subject, method: :delete, data: { confirm: 'Are you sure?' },  class:"delete material-icons" %>
                  </div>
