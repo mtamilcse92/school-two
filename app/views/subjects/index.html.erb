@@ -1,14 +1,16 @@
 <div class="row">
-<div class="col-2 col l10 offset-l1">
-	<h4 class="col l2">SUBJECTS</h4>
-	<h4 class="col l2 offset-l7">New Subject</h4>
-	<a class="add-subject btn-floating btn-large waves-effect waves-light light-blue darken-1"><i class="material-icons">add</i></a>
-</div>
+	<div class="col-2 col l10 offset-l1">
+		<h4 class="col l2">SUBJECTS</h4>
+		<h4 class="col l2 offset-l7">New Subject</h4>
+		<a class="add-subject btn-floating btn-large waves-effect waves-light light-blue darken-1">
+			<i class="material-icons">add</i>
+		</a>
+	</div>
 </div>
 <div id="subject-display" class="row subject-display">
-<div class="subject-text col l10 offset-l1">
-<%= render "subjects/form" %>
-</div>
+	<div class="subject-text col l10 offset-l1">
+		<%= render "subjects/form" %>
+	</div>
 </div>
 
 <% @subjects.each do |subject| %>
@@ -33,4 +35,4 @@
     </li>
   </ul>
 </div>
-  <% end %>
+<% end %>
